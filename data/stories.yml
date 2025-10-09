@@ -1,30 +1,69 @@
-version: "3.1"
-
-stories:
-
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+# version: "3.1"
+#
+# stories:
+#
+# # Multi-turn itinerary request using the form
+# - story: Dynamic itinerary request
+#   steps:
+#     - intent: recommendation_request
+#     - action: itinerary_form
+#     - active_loop: itinerary_form
+#     - action: itinerary_form
+#     - active_loop: null
+#     - action: action_suggest_itinerary
+#     - action: utter_happy
+#
+# # Destination-based query using the form
+# - story: Destination query using form
+#   steps:
+#     - intent: destination_query
+#     - action: itinerary_form
+#     - active_loop: itinerary_form
+#     - action: itinerary_form
+#     - active_loop: null
+#     - action: action_suggest_itinerary
+#     - action: utter_happy
+#
+# # Activity preference query using the form
+# - story: Activity preference using form
+#   steps:
+#     - intent: activity_preference
+#     - action: itinerary_form
+#     - active_loop: itinerary_form
+#     - action: itinerary_form
+#     - active_loop: null
+#     - action: action_suggest_itinerary
+#     - action: utter_happy
+#
+# # Duration query using the form
+# - story: Duration query using form
+#   steps:
+#     - intent: duration_query
+#     - action: itinerary_form
+#     - active_loop: itinerary_form
+#     - action: itinerary_form
+#     - active_loop: null
+#     - action: action_suggest_itinerary
+#     - action: utter_happy
+#
+# # Best time query using the form
+# - story: Best time query using form
+#   steps:
+#     - intent: best_time_query
+#     - action: itinerary_form
+#     - active_loop: itinerary_form
+#     - action: itinerary_form
+#     - active_loop: null
+#     - action: action_suggest_itinerary
+#     - action: utter_happy
+#
+# # Category query using the form
+# - story: Category query using form
+#   steps:
+#     - intent: category_query
+#     - action: itinerary_form
+#     - active_loop: itinerary_form
+#     - action: itinerary_form
+#     - active_loop: null
+#     - action: action_suggest_itinerary
+#     - action: utter_happy

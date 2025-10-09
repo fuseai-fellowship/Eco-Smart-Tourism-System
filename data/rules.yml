@@ -2,12 +2,171 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+# --------------------
+# General Responses
+# --------------------
+- rule: Greet user
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: greet
+    - action: utter_greet
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Goodbye
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Affirm
+  steps:
+    - intent: affirm
+    - action: utter_happy
+
+- rule: Deny
+  steps:
+    - intent: deny
+    - action: utter_cheer_up
+
+# --------------------
+# Mood and Empathy
+# --------------------
+- rule: User feels great
+  steps:
+    - intent: mood_great
+    - action: utter_happy
+
+- rule: User is sad
+  steps:
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+
+# --------------------
+# Bot Identity
+# --------------------
+- rule: Bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+# --------------------
+# Itinerary Planning Flow
+# --------------------
+
+# Step 1: User initiates planning
+- rule: Start itinerary planning
+  steps:
+    - intent: plan_trip
+    - action: utter_plan_trip_start
+    - active_loop: itinerary_form
+
+# Step 2: Ask for location if empty
+- rule: Ask location
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - location: null
+  steps:
+    - action: utter_ask_location_or_province
+
+# Step 3: Ask for province if empty and location not provided
+- rule: Ask province
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - province: null
+        - location: null
+  steps:
+    - action: utter_ask_location_or_province
+
+# Step 4: User provides location
+- rule: Provide location
+  steps:
+    - intent: provide_location
+    - active_loop: itinerary_form
+
+# Step 5: User provides province
+- rule: Provide province
+  steps:
+    - intent: provide_province
+    - active_loop: itinerary_form
+
+# Step 6: Ask for activity type
+- rule: Ask activity type
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - activity_type: null
+  steps:
+    - action: utter_ask_activity_type
+
+# Step 7: User provides activity type
+- rule: Provide activity type
+  steps:
+    - intent: activity_preference
+    - active_loop: itinerary_form
+
+# Step 8: Ask for duration
+- rule: Ask duration
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - duration: null
+  steps:
+    - action: utter_ask_duration
+
+# Step 9: User provides duration
+- rule: Provide duration
+  steps:
+    - intent: provide_duration
+    - active_loop: itinerary_form
+
+# Step 10: Ask for best time
+- rule: Ask best time
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - best_time: null
+  steps:
+    - action: utter_ask_best_time
+
+# Step 11: User provides best time
+- rule: Provide best time
+  steps:
+    - intent: best_time_query
+    - active_loop: itinerary_form
+
+# Step 12: Ask for category
+- rule: Ask category
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - category: null
+  steps:
+    - action: utter_ask_category
+
+# Step 13: User provides category
+- rule: Provide category
+  steps:
+    - intent: provide_category
+    - active_loop: itinerary_form
+
+# Step 14: Ask for popularity preference
+- rule: Ask popularity preference
+  condition:
+    - active_loop: itinerary_form
+    - slot_was_set:
+        - popularity_preference: null
+  steps:
+    - action: utter_ask_category  # matches your domain
+
+# Step 15: User provides popularity preference and submit form
+- rule: Provide popularity preference
+  steps:
+    - intent: inform
+    - active_loop: null
+    - action: action_suggest_itinerary
+
+# Step 16: User asks for recommendations
+- rule: Ask for recommendations
+  steps:
+    - intent: ask_recommendations
+    - action: action_recommend_destinations

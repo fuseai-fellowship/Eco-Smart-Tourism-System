@@ -1,7 +1,12 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+#### It includes both basic conversations and form interactions.
 
 stories:
+
+# -------------------------
+# Greeting & mood stories
+# -------------------------
+
 - story: happy path 1
   steps:
   - user: |
@@ -89,3 +94,150 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+# -------------------------
+# Itinerary Form Tests
+# -------------------------
+
+# Happy path: all slots filled correctly
+- story: itinerary form happy path
+  steps:
+  - user: |
+      I want a trip plan
+    intent: recommendation_request
+  - action: itinerary_form
+  - active_loop: itinerary_form
+
+  - user: |
+      Kathmandu
+    intent: destination_query
+    entities:
+      - destination: Kathmandu
+
+  - user: |
+      Adventure
+    intent: activity_preference
+    entities:
+      - activity_type: Adventure
+
+  - user: |
+      3 days
+    intent: duration_query
+    entities:
+      - duration: 3 days
+
+  - user: |
+      October
+    intent: best_time_query
+    entities:
+      - best_time: October
+
+  - user: |
+      Popular
+    intent: category_query
+    entities:
+      - category: Popular
+
+  - action: action_suggest_itinerary
+  - action: utter_happy
+
+# Negative path 1: user skips a slot (duration)
+- story: itinerary form missing duration
+  steps:
+  - user: |
+      I want a trip plan
+    intent: recommendation_request
+  - action: itinerary_form
+  - active_loop: itinerary_form
+
+  - user: |
+      Pokhara
+    intent: destination_query
+    entities:
+      - destination: Pokhara
+
+  - user: |
+      Cultural
+    intent: activity_preference
+    entities:
+      - activity_type: Cultural
+
+  # User skips duration
+  - user: |
+      I don't know
+    intent: duration_query
+    entities:
+      - duration: null
+
+  - action: utter_ask_duration  # Bot should prompt again
+
+  - user: |
+      5 days
+    intent: duration_query
+    entities:
+      - duration: 5 days
+
+  - user: |
+      November
+    intent: best_time_query
+    entities:
+      - best_time: November
+
+  - user: |
+      Off-Beat
+    intent: category_query
+    entities:
+      - category: Off-Beat
+
+  - action: action_suggest_itinerary
+  - action: utter_happy
+
+# Negative path 2: invalid input for activity type
+- story: itinerary form invalid activity
+  steps:
+  - user: |
+      I need a trip plan
+    intent: recommendation_request
+  - action: itinerary_form
+  - active_loop: itinerary_form
+
+  - user: |
+      Lumbini
+    intent: destination_query
+    entities:
+      - destination: Lumbini
+
+  - user: |
+      Sleeping
+    intent: activity_preference
+    entities:
+      - activity_type: Sleeping  # Invalid input
+
+  - action: utter_ask_activity_type  # Bot should re-prompt
+
+  - user: |
+      Sightseeing
+    intent: activity_preference
+    entities:
+      - activity_type: Sightseeing
+
+  - user: |
+      2 days
+    intent: duration_query
+    entities:
+      - duration: 2 days
+
+  - user: |
+      December
+    intent: best_time_query
+    entities:
+      - best_time: December
+
+  - user: |
+      Popular
+    intent: category_query
+    entities:
+      - category: Popular
+
+  - action: action_suggest_itinerary
+  - action: utter_happy

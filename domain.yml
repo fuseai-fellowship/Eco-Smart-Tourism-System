@@ -5,29 +5,175 @@ intents:
   - goodbye
   - affirm
   - deny
+  - bot_challenge
+  - plan_trip
+  - destination_query
+  - provide_destination
+  - provide_duration
+  - provide_category
+  - activity_preference
+  - best_time_query
+  - duration_query
+  - recommendation_request
+  - category_query
+  - ask_recommendations
   - mood_great
   - mood_unhappy
-  - bot_challenge
+  - inform
+  - provide_location
+  - provide_province
+
+entities:
+  - destination
+  - province
+  - location
+  - activity_type
+  - duration
+  - category
+  - tags
+  - festival
+  - best_time
+  - popularity_preference
+
+slots:
+  destination:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: destination
+        question: utter_ask_destination
+      - type: from_text
+  province:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: province
+        question: utter_ask_location_or_province
+      - type: from_text
+  location:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: location
+        question: utter_ask_location_or_province
+      - type: from_text
+  activity_type:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: activity_type
+        question: utter_ask_activity_type
+      - type: from_text
+  duration:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: duration
+        question: utter_ask_duration
+      - type: from_text
+  category:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: category
+        question: utter_ask_category
+      - type: from_text
+  tags:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: tags
+      - type: from_text
+  festival:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: festival
+      - type: from_text
+  best_time:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: best_time
+        question: utter_ask_best_time
+      - type: from_text
+  popularity_preference:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: popularity_preference
+        question: utter_ask_popularity_preference
+      - type: from_text
+
+forms:
+  itinerary_form:
+    required_slots:
+      - location        # optional if province is provided
+      - province        # optional if location is provided
+      - activity_type
+      - duration
+      - best_time
+      - category
+      - popularity_preference
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Namaste! 🙏 Welcome to the Smart Itinerary Planner! How can I help you today?"
   utter_goodbye:
-  - text: "Bye"
-
+    - text: "Dhanyabad 🙏 Have an enjoyable and fun trip! Safe travels!"
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I’m your Smart Itinerary Planner bot, powered by Rasa and tourism data."
+  utter_happy:
+    - text: "Great! Let’s continue planning your trip 🗺️"
+  utter_cheer_up:
+    - text: "Here’s something to cheer you up 🌈"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_that_help:
+    - text: "Did that help you? 😊"
+  utter_plan_trip_start:
+    - text: "Alright! Let’s plan your trip to Nepal 🇳🇵. I’ll need a few details first."
+  utter_ask_destination:
+    - text: "Do you have a specific destination in Nepal in mind, or should I recommend some places?"
+  utter_ask_location_or_province:
+    - text: "Do you want to plan by specific location or by province?"
+  utter_ask_activity_type:
+    - text: "What kind of activities do you enjoy? (Adventure, Cultural, Wildlife, Sightseeing, Trekking, Pilgrimage)"
+  utter_ask_duration:
+    - text: "How long is your trip? (e.g., 1 day, 2 days, a week)"
+  utter_ask_best_time:
+    - text: "When are you planning to visit? (e.g., March, Winter season, Summer vacation)"
+  utter_ask_category:
+    - text: "Which type of destination would you like? (Adventure, Cultural, Nature, etc.)"
+  utter_ask_popularity_preference:
+    - text: "Would you prefer **popular destinations**, **off-beat**, or **both**?"
+  utter_no_info_found:
+    - text: "Sorry 😔, I don’t have enough information for that destination yet."
+  utter_recommend_some:
+    - text: "Here are a few popular destinations in Nepal: Kathmandu 🏙️, Pokhara 🌄, Chitwan 🐘, and Lumbini 🕊️. Would you like me to plan an itinerary for one of these?"
+
+actions:
+  - action_suggest_itinerary
+  - action_recommend_destinations   # add this if you plan to implement
 
 session_config:
   session_expiration_time: 60
