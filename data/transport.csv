@@ -1,0 +1,101 @@
+route_id,origin,destination,mode,duration,price_range,frequency,notes
+T001,Nagarkot,Bhaktapur,Bus,10 hrs,3206-8281 NPR,Twice a Day,Scenic route through hills
+T002,Ilam,Chitwan,Tourist Bus,10 hrs,3208-8774 NPR,Daily,Scenic route through hills
+T003,Kathmandu,Nagarkot,Micro Van,6 hrs,2483-6164 NPR,Twice a Day,Limited seats in peak season
+T004,Bhaktapur,Pokhara,Tourist Bus,5 hrs,2450-5179 NPR,Weekly,Limited seats in peak season
+T005,Pokhara,Ilam,Flight,4 hrs,1001-7893 NPR,Twice a Day,Advance booking recommended
+T006,Pokhara,Bandipur,Flight,5 hrs,1948-8028 NPR,Weekly,Scenic route through hills
+T007,Lumbini,Chitwan,Flight,8 hrs,3970-6629 NPR,Twice a Day,Limited seats in peak season
+T008,Kathmandu,Lumbini,Private Jeep,4 hrs,2467-7969 NPR,Weekly,Advance booking recommended
+T009,Pokhara,Chitwan,Bus,5 hrs,3706-8152 NPR,Twice a Day,Comfortable AC buses available
+T010,Dhulikhel,Pokhara,Tourist Bus,4 hrs,1622-4473 NPR,Daily,Scenic route through hills
+T011,Bhaktapur,Pokhara,Flight,4 hrs,1922-7018 NPR,Twice a Day,Limited seats in peak season
+T012,Kathmandu,Pokhara,Tourist Bus,6 hrs,2802-8867 NPR,Twice a Day,Comfortable AC buses available
+T013,Bhaktapur,Bandipur,Flight,3 hrs,1859-9644 NPR,Daily,Advance booking recommended
+T014,Pokhara,Ilam,Bus,3 hrs,3143-5756 NPR,Daily,Comfortable AC buses available
+T015,Lumbini,Nagarkot,Private Jeep,9 hrs,882-9589 NPR,Daily,Limited seats in peak season
+T016,Chitwan,Dhulikhel,Micro Van,1 hrs,1716-6068 NPR,Weekly,Advance booking recommended
+T017,Nagarkot,Ilam,Private Jeep,6 hrs,2680-6065 NPR,Daily,Limited seats in peak season
+T018,Nagarkot,Ilam,Micro Van,2 hrs,830-8191 NPR,Weekly,Advance booking recommended
+T019,Dhulikhel,Nagarkot,Flight,2 hrs,2773-4523 NPR,Twice a Day,Advance booking recommended
+T020,Bandipur,Nagarkot,Flight,5 hrs,1571-5229 NPR,Weekly,Comfortable AC buses available
+T021,Pokhara,Ilam,Flight,3 hrs,3754-4209 NPR,Weekly,Limited seats in peak season
+T022,Nagarkot,Dhulikhel,Private Jeep,7 hrs,2390-4290 NPR,Weekly,Comfortable AC buses available
+T023,Bandipur,Lumbini,Micro Van,8 hrs,3551-6937 NPR,Weekly,Advance booking recommended
+T024,Chitwan,Dhulikhel,Flight,2 hrs,2728-5049 NPR,Weekly,Advance booking recommended
+T025,Dhulikhel,Chitwan,Flight,2 hrs,1710-6911 NPR,Daily,Advance booking recommended
+T026,Ilam,Bandipur,Flight,5 hrs,3198-6409 NPR,Twice a Day,Scenic route through hills
+T027,Bhaktapur,Pokhara,Micro Van,10 hrs,3342-4584 NPR,Twice a Day,Comfortable AC buses available
+T028,Dhulikhel,Kathmandu,Private Jeep,9 hrs,2022-7385 NPR,Daily,Comfortable AC buses available
+T029,Chitwan,Lumbini,Flight,7 hrs,3132-7749 NPR,Daily,Advance booking recommended
+T030,Chitwan,Kathmandu,Private Jeep,6 hrs,3384-5449 NPR,Twice a Day,Scenic route through hills
+T031,Pokhara,Bhaktapur,Flight,4 hrs,3917-5382 NPR,Weekly,Comfortable AC buses available
+T032,Bhaktapur,Kathmandu,Tourist Bus,10 hrs,2576-9190 NPR,Twice a Day,Limited seats in peak season
+T033,Ilam,Bhaktapur,Private Jeep,1 hrs,954-8373 NPR,Daily,Advance booking recommended
+T034,Pokhara,Bandipur,Micro Van,4 hrs,873-9544 NPR,Daily,Comfortable AC buses available
+T035,Lumbini,Bandipur,Flight,3 hrs,1220-7143 NPR,Weekly,Advance booking recommended
+T036,Chitwan,Kathmandu,Bus,5 hrs,1991-7735 NPR,Weekly,Advance booking recommended
+T037,Ilam,Chitwan,Flight,8 hrs,2271-5544 NPR,Daily,Limited seats in peak season
+T038,Pokhara,Lumbini,Tourist Bus,3 hrs,1665-4180 NPR,Weekly,Comfortable AC buses available
+T039,Kathmandu,Bandipur,Bus,7 hrs,3422-6096 NPR,Weekly,Scenic route through hills
+T040,Pokhara,Kathmandu,Bus,1 hrs,3625-4949 NPR,Twice a Day,Limited seats in peak season
+T041,Ilam,Kathmandu,Micro Van,5 hrs,2743-9750 NPR,Daily,Comfortable AC buses available
+T042,Pokhara,Nagarkot,Private Jeep,2 hrs,3513-8263 NPR,Twice a Day,Comfortable AC buses available
+T043,Ilam,Kathmandu,Micro Van,10 hrs,1282-6316 NPR,Daily,Scenic route through hills
+T044,Bhaktapur,Lumbini,Micro Van,4 hrs,3986-6155 NPR,Weekly,Comfortable AC buses available
+T045,Bandipur,Ilam,Flight,3 hrs,961-8491 NPR,Twice a Day,Comfortable AC buses available
+T046,Bhaktapur,Bandipur,Tourist Bus,1 hrs,852-9503 NPR,Daily,Scenic route through hills
+T047,Bhaktapur,Chitwan,Bus,9 hrs,1107-9928 NPR,Weekly,Scenic route through hills
+T048,Nagarkot,Lumbini,Private Jeep,5 hrs,1881-7804 NPR,Daily,Scenic route through hills
+T049,Chitwan,Pokhara,Flight,6 hrs,3572-6562 NPR,Twice a Day,Scenic route through hills
+T050,Kathmandu,Pokhara,Bus,3 hrs,3517-9302 NPR,Daily,Advance booking recommended
+T051,Bandipur,Bhaktapur,Micro Van,5 hrs,3802-4762 NPR,Twice a Day,Advance booking recommended
+T052,Chitwan,Kathmandu,Private Jeep,7 hrs,2669-6227 NPR,Twice a Day,Limited seats in peak season
+T053,Ilam,Chitwan,Bus,3 hrs,3651-9951 NPR,Daily,Comfortable AC buses available
+T054,Kathmandu,Ilam,Micro Van,8 hrs,3130-9558 NPR,Twice a Day,Comfortable AC buses available
+T055,Ilam,Bandipur,Micro Van,1 hrs,3603-9958 NPR,Daily,Limited seats in peak season
+T056,Bhaktapur,Kathmandu,Private Jeep,8 hrs,988-4519 NPR,Twice a Day,Advance booking recommended
+T057,Pokhara,Lumbini,Flight,9 hrs,2942-9639 NPR,Weekly,Scenic route through hills
+T058,Ilam,Lumbini,Private Jeep,6 hrs,3518-9541 NPR,Weekly,Limited seats in peak season
+T059,Chitwan,Pokhara,Bus,3 hrs,2870-7845 NPR,Twice a Day,Comfortable AC buses available
+T060,Kathmandu,Bhaktapur,Flight,4 hrs,2155-6279 NPR,Daily,Comfortable AC buses available
+T061,Dhulikhel,Ilam,Private Jeep,4 hrs,1122-7761 NPR,Twice a Day,Limited seats in peak season
+T062,Kathmandu,Bhaktapur,Private Jeep,6 hrs,1286-8075 NPR,Weekly,Scenic route through hills
+T063,Kathmandu,Ilam,Private Jeep,1 hrs,3082-8499 NPR,Daily,Scenic route through hills
+T064,Nagarkot,Lumbini,Private Jeep,6 hrs,2288-4445 NPR,Daily,Limited seats in peak season
+T065,Bandipur,Bhaktapur,Flight,8 hrs,1267-4799 NPR,Weekly,Comfortable AC buses available
+T066,Pokhara,Bandipur,Flight,5 hrs,3043-8277 NPR,Twice a Day,Scenic route through hills
+T067,Pokhara,Chitwan,Private Jeep,3 hrs,3736-9912 NPR,Twice a Day,Scenic route through hills
+T068,Nagarkot,Lumbini,Tourist Bus,2 hrs,2409-5767 NPR,Twice a Day,Comfortable AC buses available
+T069,Bandipur,Kathmandu,Private Jeep,1 hrs,3393-9507 NPR,Weekly,Scenic route through hills
+T070,Bhaktapur,Dhulikhel,Micro Van,9 hrs,1351-8087 NPR,Daily,Scenic route through hills
+T071,Dhulikhel,Ilam,Micro Van,8 hrs,2882-5452 NPR,Weekly,Comfortable AC buses available
+T072,Chitwan,Kathmandu,Private Jeep,10 hrs,3282-6637 NPR,Weekly,Limited seats in peak season
+T073,Ilam,Lumbini,Flight,7 hrs,2204-6410 NPR,Twice a Day,Comfortable AC buses available
+T074,Chitwan,Ilam,Micro Van,9 hrs,2024-9747 NPR,Weekly,Advance booking recommended
+T075,Dhulikhel,Lumbini,Tourist Bus,4 hrs,3356-9853 NPR,Twice a Day,Advance booking recommended
+T076,Chitwan,Dhulikhel,Micro Van,9 hrs,3643-9218 NPR,Twice a Day,Scenic route through hills
+T077,Bandipur,Bhaktapur,Micro Van,10 hrs,3532-9818 NPR,Twice a Day,Advance booking recommended
+T078,Ilam,Pokhara,Micro Van,2 hrs,903-7121 NPR,Daily,Scenic route through hills
+T079,Pokhara,Lumbini,Flight,3 hrs,1973-9599 NPR,Twice a Day,Comfortable AC buses available
+T080,Pokhara,Nagarkot,Tourist Bus,9 hrs,932-6939 NPR,Twice a Day,Scenic route through hills
+T081,Dhulikhel,Lumbini,Micro Van,7 hrs,1773-8186 NPR,Weekly,Advance booking recommended
+T082,Pokhara,Ilam,Private Jeep,7 hrs,3606-6562 NPR,Weekly,Scenic route through hills
+T083,Pokhara,Nagarkot,Tourist Bus,10 hrs,3998-7630 NPR,Daily,Advance booking recommended
+T084,Dhulikhel,Lumbini,Tourist Bus,5 hrs,2638-5454 NPR,Weekly,Scenic route through hills
+T085,Chitwan,Dhulikhel,Micro Van,2 hrs,2345-4333 NPR,Twice a Day,Advance booking recommended
+T086,Dhulikhel,Nagarkot,Tourist Bus,3 hrs,3192-6090 NPR,Daily,Advance booking recommended
+T087,Bhaktapur,Chitwan,Bus,3 hrs,2121-8890 NPR,Daily,Advance booking recommended
+T088,Bhaktapur,Bandipur,Bus,6 hrs,2952-5802 NPR,Daily,Scenic route through hills
+T089,Dhulikhel,Chitwan,Private Jeep,9 hrs,2999-7305 NPR,Daily,Advance booking recommended
+T090,Lumbini,Dhulikhel,Flight,6 hrs,2277-6405 NPR,Daily,Limited seats in peak season
+T091,Dhulikhel,Pokhara,Bus,6 hrs,2625-5969 NPR,Weekly,Comfortable AC buses available
+T092,Pokhara,Bandipur,Private Jeep,2 hrs,2380-6102 NPR,Weekly,Advance booking recommended
+T093,Pokhara,Bandipur,Micro Van,9 hrs,2625-7988 NPR,Daily,Advance booking recommended
+T094,Lumbini,Bandipur,Micro Van,2 hrs,1193-5372 NPR,Weekly,Scenic route through hills
+T095,Kathmandu,Lumbini,Tourist Bus,7 hrs,1225-5685 NPR,Weekly,Limited seats in peak season
+T096,Kathmandu,Chitwan,Bus,8 hrs,3736-6718 NPR,Daily,Scenic route through hills
+T097,Kathmandu,Pokhara,Tourist Bus,5 hrs,3085-4578 NPR,Weekly,Comfortable AC buses available
+T098,Nagarkot,Ilam,Private Jeep,8 hrs,3381-7314 NPR,Twice a Day,Advance booking recommended
+T099,Pokhara,Ilam,Bus,9 hrs,824-9255 NPR,Weekly,Scenic route through hills
+T100,Pokhara,Kathmandu,Flight,9 hrs,1234-6375 NPR,Weekly,Advance booking recommended
