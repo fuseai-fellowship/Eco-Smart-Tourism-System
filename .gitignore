@@ -205,3 +205,54 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Django
+*.pot
+*.pyc
+db.sqlite3
+/media
+/staticfiles/
+*.bak
+*.swp
+
+# Environment
+venv/
+.env
+*.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Model files (large data)
+*.pkl
+*.pt
+*.pth
+*.bin
+*.h5
+*.joblib
+*.ckpt
+*.json
+*.safetensors
+*.npz
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# React frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env
